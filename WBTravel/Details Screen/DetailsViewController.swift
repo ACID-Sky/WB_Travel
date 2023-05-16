@@ -39,13 +39,8 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = BackgroundView()
-        self.setupView()
         self.setupFlightTemplateView()
-
         self.checkLikedFlight()
-    }
-    private func setupView() {
-        self.navigationItem.title = "Подробности полёт " + flight.startLocationCode + " -> " + flight.endLocationCode
     }
 
     private func setupFlightTemplateView() {

@@ -24,7 +24,6 @@ class BackgroundView: UIView {
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         self.imageView.contentMode = .scaleToFill
         self.imageView.image = UIImage(named: "backgroundWB")
-        self.imageView.alpha = 0.85
 
         self.addSubview(self.imageView)
 

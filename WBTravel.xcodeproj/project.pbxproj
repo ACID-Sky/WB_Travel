@@ -82,6 +82,7 @@
 		76C5B98C2A0E6C790049F2E2 /* WBTravel */ = {
 			isa = PBXGroup;
 			children = (
+				76C5B9BA2A124E6B0049F2E2 /* BackgroundView.swift */,
 				76C5B9C62A1370700049F2E2 /* CommonFunc.swift */,
 				76C5B9B02A10F7100049F2E2 /* TextFieldWithPadding.swift */,
 				76C5B9AB2A0FBC210049F2E2 /* General Screen */,
@@ -112,7 +113,6 @@
 			children = (
 				76C5B9C12A1287DE0049F2E2 /* Search View */,
 				76C5B9912A0E6C790049F2E2 /* GeneralFlightListViewController.swift */,
-				76C5B9BA2A124E6B0049F2E2 /* BackgroundView.swift */,
 				76C5B9AC2A0FBC4B0049F2E2 /* QueryEntryView.swift */,
 			);
 			path = "General Screen";

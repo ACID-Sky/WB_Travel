@@ -106,7 +106,7 @@ extension GeneralFlightListViewController: QueryEntryDelegate {
 extension GeneralFlightListViewController: SearchResultViewDelegate {
     func openDetails(for flightIndex: Int, flight: Flights) {
         let vc = DetailsViewController(flightIndex: flightIndex, flight: flight, delegate: self)
-        self.navigationController?.pushViewController(vc, animated: false)
+        present(vc, animated: true)
     }
 }
 
