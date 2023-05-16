@@ -68,15 +68,12 @@ final class GeneralFlightListViewController: UIViewController {
                                           preferredStyle: .alert
             )
 
-
-
             let yesAction = UIAlertAction(title: "Ok", style: .default)
 
             alert.addAction(yesAction)
             self.present(alert, animated: true)
         }
     }
-
 }
 
 extension GeneralFlightListViewController: QueryEntryDelegate {
