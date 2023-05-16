@@ -33,7 +33,6 @@ final class FlightCollectionViewCell: UICollectionViewCell {
             self.flightTemplateView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
         ])
     }
-    
 }
 
 
