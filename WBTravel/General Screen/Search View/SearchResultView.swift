@@ -46,8 +46,6 @@ final class SearchResultView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-
-
     private func setupActivityIndicator() {
         self.activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         self.activityIndicator.isHidden = true

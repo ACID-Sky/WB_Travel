@@ -35,7 +35,6 @@ final class FlightCollectionViewCell: UICollectionViewCell {
     }
 }
 
-
 extension FlightCollectionViewCell {
     func setup(for flight: Flights) {
         self.flightTemplateView.changeLiked(to: flight.liked)
