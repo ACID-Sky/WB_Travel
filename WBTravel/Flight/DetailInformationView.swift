@@ -106,7 +106,6 @@ final class DetailInformationView: UIView {
             if $0.numberOfSeats > 0 {
                 let label = UILabel()
                 label.text = String($0.numberOfSeats)
-                var passengerType =  $0.typePassenger.rawValue
 
                 let passenger: PassengerType = $0.typePassenger
 
