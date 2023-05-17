@@ -26,6 +26,7 @@
 		76C5B9C32A13632E0049F2E2 /* DetailInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C5B9C22A13632D0049F2E2 /* DetailInformationView.swift */; };
 		76C5B9C52A1363E50049F2E2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C5B9C42A1363E50049F2E2 /* DetailView.swift */; };
 		76C5B9C72A1370700049F2E2 /* CommonFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C5B9C62A1370700049F2E2 /* CommonFunc.swift */; };
+		76C5B9C92A1484F10049F2E2 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C5B9C82A1484F00049F2E2 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		76C5B9C22A13632D0049F2E2 /* DetailInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInformationView.swift; sourceTree = "<group>"; };
 		76C5B9C42A1363E50049F2E2 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		76C5B9C62A1370700049F2E2 /* CommonFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunc.swift; sourceTree = "<group>"; };
+		76C5B9C82A1484F00049F2E2 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				76C5B9BA2A124E6B0049F2E2 /* BackgroundView.swift */,
 				76C5B9C62A1370700049F2E2 /* CommonFunc.swift */,
 				76C5B9B02A10F7100049F2E2 /* TextFieldWithPadding.swift */,
+				76C5B9C82A1484F00049F2E2 /* Enums.swift */,
 				76C5B9AB2A0FBC210049F2E2 /* General Screen */,
 				76C5B9B72A12402E0049F2E2 /* Details Screen */,
 				76C5B9B42A121B3C0049F2E2 /* Flight */,
@@ -232,6 +235,7 @@
 				76C5B9902A0E6C790049F2E2 /* SceneDelegate.swift in Sources */,
 				76C5B9BE2A1254BA0049F2E2 /* FlightTemplateView.swift in Sources */,
 				76C5B9B92A1240750049F2E2 /* DetailsViewController.swift in Sources */,
+				76C5B9C92A1484F10049F2E2 /* Enums.swift in Sources */,
 				76C5B9C52A1363E50049F2E2 /* DetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

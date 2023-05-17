@@ -38,7 +38,19 @@ final class DetailInformationView: UIView {
     }
 
     private func setupServiceClassLabel(){
-        self.serviceClassLabel.text = self.flight.serviceClass
+        let serviceClass: ServiceClass = ServiceClass(rawValue: self.flight.serviceClass) ?? .ECONOMY
+
+        self.serviceClassLabel.text = {
+            switch serviceClass {
+
+            case .ECONOMY:
+                return "Эконом"
+            case .COMFORT:
+                return "Комфорт"
+            case .BUSINESS:
+                return "Бизнес"
+            }
+        }()
         let stack = CommonFunc().generateVerticalStack(with: (nameLabel: "Класс обслуживания", valuesLabel: self.serviceClassLabel))
 
         self.addSubview(stack)
@@ -61,14 +73,66 @@ final class DetailInformationView: UIView {
         groupHorizontalStack.distribution = .fillProportionally
         groupHorizontalStack.alignment = .fill
 
-        let seatsVerticalStack = CommonFunc().generateVerticalStack(with: "Доступные места", stack: groupHorizontalStack)
+        let seatsVerticalStack = CommonFunc().generateVerticalStack(with: "Места в перелёте", stack: groupHorizontalStack)
+
+        var passengers: [(typePassenger: PassengerType, numberOfSeats: Int16)] = [
+            (typePassenger: .ADT, numberOfSeats: 0),
+            (typePassenger: .CHD, numberOfSeats: 0),
+            (typePassenger: .INF, numberOfSeats: 0),
+            (typePassenger: .INS, numberOfSeats: 0),
+            (typePassenger: .UNN, numberOfSeats: 0)
+        ]
 
         self.flight.seats.forEach({
-            let label = UILabel()
-            label.text = String($0.count)
-            let seatStack = CommonFunc().generateVerticalStack(with: (nameLabel: $0.passengerType, valuesLabel: label))
-            groupHorizontalStack.addArrangedSubview(seatStack)
+            let passengerType: PassengerType = PassengerType(rawValue: $0.passengerType) ?? .Unknow
+
+            switch passengerType {
+            case .ADT:
+                passengers[0].numberOfSeats += $0.count
+            case .CHD:
+                passengers[1].numberOfSeats += $0.count
+            case .INF:
+                passengers[2].numberOfSeats += $0.count
+            case .INS:
+                passengers[3].numberOfSeats += $0.count
+            case .UNN:
+                passengers[4].numberOfSeats += $0.count
+            case .Unknow:
+                return
+            }
         })
+
+        passengers.forEach({
+            if $0.numberOfSeats > 0 {
+                let label = UILabel()
+                label.text = String($0.numberOfSeats)
+                var passengerType =  $0.typePassenger.rawValue
+
+                let passenger: PassengerType = $0.typePassenger
+
+                let passengerTypeString: String = {
+                    switch passenger {
+                    case .ADT:
+                        return "Взрослый (старше 12 лет)"
+                    case .CHD:
+                        return "Ребенок (от 2 до 12 лет)"
+                    case .INF:
+                        return "Младенец без места (до 2 лет)"
+                    case .INS:
+                        return "Младенец с местом (до 2 лет)"
+                    case .UNN:
+                        return "Ребенок без сопровождения(от 2 до 12 лет)"
+                    case .Unknow:
+                        return ""
+                    }
+                }()
+
+
+                let seatStack = CommonFunc().generateVerticalStack(with: (nameLabel: passengerTypeString, valuesLabel: label))
+                groupHorizontalStack.addArrangedSubview(seatStack)
+            }
+        })
+
 
         self.addSubview(seatsVerticalStack)
 
